@@ -5,7 +5,7 @@ ABSDIR=$(dirname $ABSPATH)
 source ${ABSDIR}/profile.sh
 
 IDLE_PORT=$(find_idle_port)
-REPOSITORY=/home/ec2-user/app/step4
+REPOSITORY=/home/swlee0376/zero-downtime-deploy
 
 echo "> Build 파일 복사"
 echo "> cp $REPOSITORY/*.jar $REPOSITORY/"

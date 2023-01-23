@@ -2,13 +2,13 @@
 
 function find_idle_profile()
 {
-    RESPONSE_CODE=$(sudo curl -s -o /dev/null -w "%{http_code}" http://34.16.134.87/)
+    RESPONSE_CODE=$(sudo curl -s -o /dev/null -w "%{http_code}" http://${domain}/)
 
     if [ ${RESPONSE_CODE} -ge 400 ] # 400 보다 크면 (즉, 40x/50x 에러 모두 포함)
     then
         CURRENT_PROFILE=green
     else
-        CURRENT_PROFILE=$(sudo curl -s http://34.16.134.87/)
+        CURRENT_PROFILE=$(sudo curl -s http://${domain}/)
     fi
 
     if [ ${CURRENT_PROFILE} == blue ]
