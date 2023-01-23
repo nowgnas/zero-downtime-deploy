@@ -1,12 +1,5 @@
 version: "3"
 services:
-  web:
-    image: nginx # 존재하는 nginx 이미지 사용
-    container_name: nginx # Nginx Container 이름 지정
-    ports:
-      - 80:80
-    volumes:
-      - /etc/nginx/:/etc/nginx/ # EC2 Nginx와 Docker Nginx Container 를 매핑
   spring1:
     image: nowgnas/zero-downtime-deploy:server # 내가 만든 이미지 이름을 지정
     container_name: blue # 컨테이너 이름 지정

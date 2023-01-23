@@ -2,6 +2,7 @@
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
+echo ${ABSDIR}
 source ${ABSDIR}/profile.sh
 
 IDLE_PROFILE=$(find_idle_profile)
